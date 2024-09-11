@@ -37,8 +37,7 @@ public class House {
     public House deepCopy(){
         return new House(this);
     }
-    //this is a overridden equals method.**********OVERRIDE NOTATION ISNT WORKING***********FIXME
-    //@Override
+
     public boolean equals(House B){
         return (owner.equals(B.owner)&&value == B.value);
     }
