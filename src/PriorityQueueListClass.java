@@ -56,6 +56,23 @@ public class PriorityQueueListClass implements PriorityQueueInterface{
             length++;
         }
     }
+    public Node delete(Node mostExpesniveHouse, Node prevmostExpensiveHouse){
+        if (mostExpesniveHouse == front) {
+            front = front.next; // if the front is the most expensive
+            if (front == null) {
+                back = null; // if the list becomes empty
+            }
+        } else if (mostExpesniveHouse == back) {
+            back = prevmostExpensiveHouse; // last house is the most expensive
+            if (back != null) { // so many problems where the length would be -3 after running this method. But this if statement fixes that. Sometimes if the last item was removed, it would duplicate a house removal.
+                back.next = null; // update backs next to null
+            }
+        } else {
+            prevmostExpensiveHouse.next = mostExpesniveHouse.next; // somewhere in the list is most expensive
+        }
+        length--;//removing one we subtract the length
+        return mostExpesniveHouse;
+    }
     /**Gets the house with the highest value. Use the house’s value to determine priority. The item is removed from the priority queue.*/
     @Override
     public House getMostExpensive() {
@@ -73,22 +90,9 @@ public class PriorityQueueListClass implements PriorityQueueInterface{
             prev=temp;
             temp=temp.next;
         }
-        //used for deletion
-        if (mostExpesniveHouse == front) {
-            front = front.next; // if the front is the most expensive
-            if (front == null) {
-                back = null; // if the list becomes empty
-            }
-        } else if (mostExpesniveHouse == back) {
-            back = prevmostExpensiveHouse; // last house is the most expensive
-            if (back != null) { // so many problems where the length would be -3 after running this method. But this if statement fixes that. Sometimes if the last item was removed, it would duplicate a house removal.
-                back.next = null; // update backs next to null
-            }
-        } else {
-            prevmostExpensiveHouse.next = mostExpesniveHouse.next; // somewhere in the list is most expensive
-        }
-        length--;//removing one we subtract the length
-        return mostExpesniveHouse.data;
+
+        return delete(mostExpesniveHouse,prevmostExpensiveHouse).data;
+
     }
     /**clears all items from the priority queue*/
     @Override

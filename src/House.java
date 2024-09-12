@@ -13,9 +13,9 @@ public class House {
         this.value = value;
     }
     /**This Does a DeepCopy Of the House*/
-   public House(House deepCopy){
-        this.owner = deepCopy.owner;
-        this.value = deepCopy.value;
+   public House(House other){
+        this.owner = other.owner;
+        this.value = other.value;
     }
     /**method that returns the owner*/
     public String getOwner() {

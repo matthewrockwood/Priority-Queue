@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4102302-8495-478b-a355-9d8a0a9d7863" name="Changes" comment="forgot to delete something commit">
+    <list default="true" id="d4102302-8495-478b-a355-9d8a0a9d7863" name="Changes" comment="changing javadoc and the add methods">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/House.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/House.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PriorityQueueInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PriorityQueueInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PriorityQueueListClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PriorityQueueListClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,13 +72,22 @@
       <option name="project" value="LOCAL" />
       <updated>1726023115962</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="changing javadoc and the add methods">
+      <option name="closed" value="true" />
+      <created>1726116356106</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1726116356106</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
     <MESSAGE value="forgot to delete something commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="forgot to delete something commit" />
+    <MESSAGE value="changing javadoc and the add methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="changing javadoc and the add methods" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
