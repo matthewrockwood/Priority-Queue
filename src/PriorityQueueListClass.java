@@ -1,4 +1,4 @@
-//This class is a priority queue using Nodes. The priority lies in the pricing of the house.
+/**This class is a priority queue using Nodes. The priority lies in the pricing of the house.*/
 public class PriorityQueueListClass implements PriorityQueueInterface{
 
     //this int will be used to track the length.
@@ -7,6 +7,7 @@ public class PriorityQueueListClass implements PriorityQueueInterface{
     private Node front;
     private Node back;
     //First we add a class that has creates Nodes for the LinkedList. The data is the house. Next is null unless assigned.
+    /** This is the Node class. It is used to create the linked list nodes.*/
     class Node{
        private House data;
        private Node next;
@@ -16,13 +17,13 @@ public class PriorityQueueListClass implements PriorityQueueInterface{
 
         }
     }
-    //default constructor that assigns the class members
+    /**default constructor that assigns the class members*/
     PriorityQueueListClass(){
         this.front = null;
         this.back = null;
         this.length = 0;
     }
-    //to make a deepcopy of a LinkedList we cant just copy the linked list. We need to copy all data of each node individually.
+    /**to make a deepcopy of a LinkedList we cant just copy the linked list. We need to copy all data of each node individually.*/
     PriorityQueueListClass(PriorityQueueListClass prique){
         if(prique.isEmpty()){
             this.front = null;
@@ -39,7 +40,7 @@ public class PriorityQueueListClass implements PriorityQueueInterface{
 
     }
 
-    //Adds a House object to the priority queue
+    /**Adds a House object to the priority queue*/
     @Override
     public void add(House a) {
         //adding one so we add to the length
@@ -50,12 +51,12 @@ public class PriorityQueueListClass implements PriorityQueueInterface{
             length++;
         }
         else{
-            back.next = newNode;
-            back = newNode;
+            newNode.next = front;
+            front = newNode;
             length++;
         }
     }
-    //Gets the house with the highest value. Use the house’s value to determine priority. The item is removed from the priority queue.
+    /**Gets the house with the highest value. Use the house’s value to determine priority. The item is removed from the priority queue.*/
     @Override
     public House getMostExpensive() {
         if(isEmpty()) return null; //checks if the list is empty first
@@ -89,19 +90,19 @@ public class PriorityQueueListClass implements PriorityQueueInterface{
         length--;//removing one we subtract the length
         return mostExpesniveHouse.data;
     }
-    //clears all items from the priority queue
+    /**clears all items from the priority queue*/
     @Override
     public void clear() {
     front=null;
     back=null;
     length=0;
     }
-    //Returns the number of houses being stored in the priority queue.
+    /**Returns the number of houses being stored in the priority queue.*/
     @Override
     public int getLength() {
         return length;
     }
-    //Returns true if the priority queue is empty
+    /**Returns true if the priority queue is empty*/
     @Override
     public boolean isEmpty() {
         return front == null;

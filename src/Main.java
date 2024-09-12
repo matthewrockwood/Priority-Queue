@@ -1,7 +1,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
-
+/**This is the main method of the priority queue. This is mostly used to just test out the queue and house method*/
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
         //creates the que and goes to the file.
